@@ -16,14 +16,14 @@
  * Therefore, return the max sliding window as [3,3,5,5,6,7].
  * 
  * Note: 
- * You may assume k is always valid, ie: 1 ¡Ü k ¡Ü input array's size for non-empty array.
+ * You may assume k is always valid, ie: 1 <= k <= input array's size for non-empty array.
  * 
  * Follow up:
  * Could you solve it in linear time?
  * 
  * Hint:
  * 1. How about using a data structure such as deque (double-ended queue)?
- * 2. The queue size need not be the same as the window¡¯s size.
+ * 2. The queue size need not be the same as the window's size.
  * 3. Remove redundant elements and the queue should store only elements that need to be considered.
  * 
  * Tags: Heap
