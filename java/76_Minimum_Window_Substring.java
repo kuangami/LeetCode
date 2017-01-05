@@ -19,27 +19,20 @@
  * Author: Xinyue Zhang
  */
  
- public class Solution {
+public class Solution {
     public String minWindow(String s, String t) {
         if(s.isEmpty() || t.isEmpty()) 
             return "";
-        
-        HashMap<Character,Integer> map = new HashMap<Character,Integer>();
+        int[] map = new int[128];
         int count = t.length();
-        char c;
-        for(int i = 0; i < count; i++){
-            c = t.charAt(i);
-            map.put(c, map.containsKey(c) ? map.get(c) + 1 : 1);
-        }
+
+        for(int i = 0; i < count; i++)
+            map[t.charAt(i)]++;
         
         int left = 0, right = 0, len = Integer.MAX_VALUE, start = 0;
         while(right < s.length()){
-            c = s.charAt(right++);
-            if(map.containsKey(c)){
-                if(map.get(c) > 0)
+                if(map[s.charAt(right++)]-- > 0)
                     count--;
-                map.put(c, map.get(c) - 1);
-            }
             
             while(count == 0){
                 if(right - left < len){
@@ -47,12 +40,8 @@
                     len = right - left;
                 }
                 
-                c = s.charAt(left++);
-                if(map.containsKey(c)){
-                    if(map.get(c) == 0)
+                    if(map[s.charAt(left++)]++ == 0)
                         count ++;
-                    map.put(c, map.get(c) + 1);
-                }
             }
         }
         
