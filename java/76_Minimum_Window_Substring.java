@@ -39,9 +39,8 @@ public class Solution {
                     start = left;
                     len = right - left;
                 }
-                
-                    if(map[s.charAt(left++)]++ == 0)
-                        count ++;
+                if(map[s.charAt(left++)]++ == 0)
+                    count ++;
             }
         }
         
