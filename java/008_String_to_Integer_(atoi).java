@@ -23,45 +23,45 @@
  *
  */
 public class Solution {
-	public int myAtoi(String str) {
-		int i = 0, res = 0, sign = 1;
-		
-		if (str == null || str.length() == 0)
-			return 0;
-		
-		while (i < str.length() && str.charAt(i) == ' ')
-			i++;
-		
-		if (str.charAt(i) == '-') {
-			sign = -1;
-			i++;
-		}	
-		else if (str.charAt(i) == '+') 
-			i++;
-		
-		for(; i < str.length(); i++) {
-			int tail = str.charAt(i) - '0';
-			if (tail <= 9 && tail >= 0) {
-				if( Integer.MAX_VALUE/10 < res || Integer.MAX_VALUE/10 == res && Integer.MAX_VALUE %10 < tail)
-		            return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
-				res = res * 10 + tail;
-			}
-			else break;
-		}
+    public int myAtoi(String str) {
+        int i = 0, res = 0, sign = 1;
+        
+        if (str == null || str.length() == 0)
+            return 0;
+        
+        while (i < str.length() && str.charAt(i) == ' ')
+            i++;
+        
+        if (str.charAt(i) == '-') {
+            sign = -1;
+            i++;
+        }   
+        else if (str.charAt(i) == '+') 
+            i++;
+        
+        for(; i < str.length(); i++) {
+            int tail = str.charAt(i) - '0';
+            if (tail <= 9 && tail >= 0) {
+                if( Integer.MAX_VALUE/10 < res || Integer.MAX_VALUE/10 == res && Integer.MAX_VALUE %10 < tail)
+                    return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+                res = res * 10 + tail;
+            }
+            else break;
+        }
 
-		return sign * res;
+        return sign * res;
     }
-	
-	public static void main(String[] args) {
-		String str1 = "-2147483647", str2 = "", str3 = "  -dfds909", str4 = "1234", str5 = "+-1", str6 = "786872346283746287346234";
-		Solution sol = new Solution();
-		System.out.printf("str1 = %d\n", sol.myAtoi(str1));
-		System.out.printf("str2 = %d\n", sol.myAtoi(str2));
-		System.out.printf("str3 = %d\n", sol.myAtoi(str3));
-		System.out.printf("str4 = %d\n", sol.myAtoi(str4));
-		System.out.printf("str5 = %d\n", sol.myAtoi(str5));
-		System.out.printf("str6 = %d\n", sol.myAtoi(str6));
-		
-	}
+    
+    public static void main(String[] args) {
+        String str1 = "-2147483647", str2 = "", str3 = "  -dfds909", str4 = "1234", str5 = "+-1", str6 = "786872346283746287346234";
+        Solution sol = new Solution();
+        System.out.printf("str1 = %d\n", sol.myAtoi(str1));
+        System.out.printf("str2 = %d\n", sol.myAtoi(str2));
+        System.out.printf("str3 = %d\n", sol.myAtoi(str3));
+        System.out.printf("str4 = %d\n", sol.myAtoi(str4));
+        System.out.printf("str5 = %d\n", sol.myAtoi(str5));
+        System.out.printf("str6 = %d\n", sol.myAtoi(str6));
+        
+    }
 
 }
