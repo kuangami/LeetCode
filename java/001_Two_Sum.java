@@ -25,35 +25,35 @@ public class Solution {
 //    public int[] twoSum(int[] nums, int target) {
 //        int[] res = new int[2];
 //
-//    	for (int i = 0; i < nums.length; i++) {
-//			for (int j = i + 1; j < nums.length; j++)
-//				if (nums[i] + nums[j] == target) {
-//					res[0] = i;
-//					res[1] = j;
-//				}	
-//    	}
-//    	return res;
+//        for (int i = 0; i < nums.length; i++) {
+//            for (int j = i + 1; j < nums.length; j++)
+//                if (nums[i] + nums[j] == target) {
+//                    res[0] = i;
+//                    res[1] = j;
+//                }   
+//        }
+//        return res;
 //    }
     
     public int[] twoSum(int[] nums, int target) {
-    	int[] res = new int[2];
+        int[] res = new int[2];
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-    	for (int i = 0; i < nums.length; i++) {
-			if (map.containsKey(target - nums[i])) {
-				res[1] = i;
-				res[0] = map.get(target - nums[i]);
-			}
-			else map.put(nums[i], i);
-    	}
-    	return res;
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target - nums[i])) {
+                res[1] = i;
+                res[0] = map.get(target - nums[i]);
+            }
+            else map.put(nums[i], i);
+        }
+        return res;
     }
     
     public static void main(String[] args) {
-    	Solution sol = new Solution();
-    	int[] nums = {0,3,2,4,0};
-    	int target = 0;
-    	int[] res = sol.twoSum(nums, target);
-    	System.out.println(res[0]);
-    	System.out.println(res[1]);
+        Solution sol = new Solution();
+        int[] nums = {0,3,2,4,0};
+        int target = 0;
+        int[] res = sol.twoSum(nums, target);
+        System.out.println(res[0]);
+        System.out.println(res[1]);
     }
 }
