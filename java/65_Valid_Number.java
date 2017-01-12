@@ -29,26 +29,26 @@ public class Solution {
         
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '-' || s.charAt(i) == '+') {
-        	    if (i != 0 && s.charAt(i - 1) != 'e')
-        		    return false;
+                if (i != 0 && s.charAt(i - 1) != 'e')
+                    return false;
             }
             else if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
-        	    number = true;
-        	    numberAfterE = true;
+                number = true;
+                numberAfterE = true;
             }
             else if (s.charAt(i) == 'e') {
-        	    if (e || !number)
-        	        return false;
-        	    e = true;
-        	    numberAfterE = false;
+                if (e || !number)
+                    return false;
+                e = true;
+                numberAfterE = false;
             }
             else if (s.charAt(i) == '.') {
         	    if (e || dot)
-        		    return false;
-        	    dot = true;
+        	        return false;
+                dot = true;
             }
             else 
-        	    return false;
+                return false;
         		
         }
         return number && numberAfterE;
