@@ -43,7 +43,7 @@ public class Solution {
                 numberAfterE = false;
             }
             else if (s.charAt(i) == '.') {
-        	    if (e || dot)
+                if (e || dot)
         	        return false;
                 dot = true;
             }
