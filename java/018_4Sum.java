@@ -21,7 +21,7 @@ import java.util.List;
  * 
  * Similar Problems: (E) Two Sum, (M) 3Sum, (M) 4Sum II
  * 
- * Author: Kuang Qin
+ * Author: Xinyue Zhang
  */
 
 public class Solution {
