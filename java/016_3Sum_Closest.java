@@ -23,11 +23,11 @@ public class Solution {
         
         //if maximum smaller than target, then return
         int res = nums[n - 1] + nums[n - 2] + nums[n - 3];
-        if (res < target) return res;
+        if (res <= target) return res;
         
-        //if maximum larger than target, then return
+        //if minimum larger than target, then return
         res = nums[0] + nums[1] + nums[2];
-        if (res > target) return res;
+        if (res >= target) return res;
         
         for (int i = 0; i < n - 2; i++) {
 
