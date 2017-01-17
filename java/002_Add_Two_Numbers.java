@@ -24,14 +24,8 @@ public class ListNode {
     int val;
     ListNode next;
     ListNode(int x) { val = x; }
+    ListNode(int x, ListNode node) { val = x; next = node; }
     
-    public static void insertList(int val, ListNode head) {
-        ListNode node = new ListNode(0);
-        node.val = val;
-        while (head.next != null)
-            head = head.next;
-        head.next = node;
-    }
 }**/
 
 public class Solution {
@@ -54,18 +48,14 @@ public class Solution {
     }
     
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2);
-        ListNode.insertList(4, l1);
-        ListNode.insertList(3, l1);
+        ListNode l1 = new ListNode(3), l1_1 = new ListNode(4, l1), l1_2 = new ListNode(2, l1_1);
         
-        ListNode l2 = new ListNode(5);
-        ListNode.insertList(6, l2);
-        ListNode.insertList(4, l2);
+        ListNode l2 = new ListNode(4), l2_1 = new ListNode(6, l2), l2_2 = new ListNode(5, l2_1);
         
         System.out.println("Sum = ");
         ListNode sum = new ListNode(0);
         Solution sol = new Solution();
-        sum = sol.addTwoNumbers(l1, l2);
+        sum = sol.addTwoNumbers(l1_2, l2_2);
         while (sum != null) {
             System.out.println(sum.val);
             sum = sum.next;
