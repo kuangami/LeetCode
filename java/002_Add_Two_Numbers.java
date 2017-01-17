@@ -25,18 +25,6 @@ public class ListNode {
     ListNode next;
     ListNode(int x) { val = x; }
     
-    public static ListNode createList(int val) {
-        ListNode prev = new ListNode(0);
-        ListNode node = new ListNode(0);
-        ListNode head = prev;
-        
-        node.val = val;
-        prev.next = node;
-        prev = node;
-        
-        return head.next;
-    }
-    
     public static void insertList(int val, ListNode head) {
         ListNode node = new ListNode(0);
         node.val = val;
@@ -66,11 +54,11 @@ public class Solution {
     }
     
     public static void main(String[] args) {
-        ListNode l1 = ListNode.createList(2);
+        ListNode l1 = new ListNode(2);
         ListNode.insertList(4, l1);
         ListNode.insertList(3, l1);
         
-        ListNode l2 = ListNode.createList(5);
+        ListNode l2 = new ListNode(5);
         ListNode.insertList(6, l2);
         ListNode.insertList(4, l2);
         
