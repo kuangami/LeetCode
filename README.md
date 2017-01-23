@@ -4,6 +4,8 @@
  --- | --------------------- | ---------- | --------------- | ---------------
 1 | Two Sum | Easy | Hash Table | build hash table while searching
 2 | Add Two Numbers | Medium | Linked List, Math | save a dummy head for output
+3 | Longest Substring Without Repeating Characters | Medium | Hash Table, Two Pointers, String | update the max length when traversing with the right pointer, move left pointer to ensure non-repeating
+4 | Median of Two Sorted Arrays | Hard | Binary Search | find the largest numbers on the left halves and smallest numbers on the right halves in each array, then use the formula median = 0.5 * (max(L1, L2) + min(R1, R2))
 7 | Reverse Integer | Easy | Math | test overflow
 8 | String to Integer (atoi) | Easy | String, Math | remove leading white spaces, test overflow
 15 | 3Sum | Medium | Two Pointers | sort first, convert into two sum problem then approach from both sides
