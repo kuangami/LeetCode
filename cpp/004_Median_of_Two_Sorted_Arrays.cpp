@@ -38,7 +38,7 @@ public:
         }
         
         vector<int> nums;   // merge two arrays into one
-        int i = 0, j = 0, k = 0;
+        int i = 0, j = 0;
         while (i < n1 && j < n2) {
             if (nums1[i] <= nums2[j]) {
                 nums.push_back(nums1[i++]);
