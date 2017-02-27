@@ -52,7 +52,7 @@ private:
         
         int i = 0, j = -1;
         while (i < n - 1) {
-            // s[i] is the prefix, s[j] is the suffix
+            // s[j] is the prefix, s[i] is the suffix
             if (j == -1 || s[i] == s[j]) {  // at the beginning or prefix and suffix matched
                 i++;
                 j++;
