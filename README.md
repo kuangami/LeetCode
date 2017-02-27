@@ -11,6 +11,7 @@
 15 | 3Sum | Medium | Two Pointers | sort first, convert into two sum problem then approach from both sides
 16 | 3Sum Closest | Medium | Two Pointers | calculate the absolute value
 18 | 4Sum | Medium | Two Pointers | 4Sum -> 3Sum -> 2Sum
+28 | Implement strStr() | Easy | KMP Algorithm, String | traverse all the possible starting points and see if the following characters in haystack match those of needle
 30 | Substring with Concatenation of All Words | Hard | Hash Table, String | build one hash table with the goal, update the other while searching
 43 | Multiply Strings | Medium | String, Math | use an array of integers to store results from multiplying single digit serparately
 65 | Valid Number | Hard | String, Math | use two flags for '.' and 'e', check the number before and after 'e' for output
