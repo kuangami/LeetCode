@@ -9,7 +9,7 @@
  * 
  * Note:
  * Given m, n satisfy the following condition:
- * 1 ¡Ü m ¡Ü n ¡Ü length of list.
+ * 1 <= m <= n <= length of list.
  * 
  * Tags: Linked List
  *
