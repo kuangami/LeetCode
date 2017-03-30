@@ -107,7 +107,7 @@ public:
                     curr = curr->left;
                 }
                 else {  // prev->right == curr
-                    prev->right == NULL;    // recover tree shape
+                    prev->right = NULL;    // recover tree shape
                     res.push_back(curr->val);
                     curr = curr->right;
                 }
