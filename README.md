@@ -6,6 +6,7 @@
 2 | Add Two Numbers | Medium | Linked List, Math | save a dummy head for output
 3 | Longest Substring Without Repeating Characters | Medium | Hash Table, Two Pointers, String | update the max length when traversing with the right pointer, move left pointer to ensure non-repeating
 4 | Median of Two Sorted Arrays | Hard | Binary Search | find the largest numbers on the left halves and smallest numbers on the right halves in each array, then use the formula median = 0.5 * (max(L1, L2) + min(R1, R2))
+5 | Longest Palindromic Substring | Medium | String | start from the middle and check both sides
 7 | Reverse Integer | Easy | Math | test overflow
 8 | String to Integer (atoi) | Easy | String, Math | remove leading white spaces, test overflow
 15 | 3Sum | Medium | Two Pointers | sort first, convert into two sum problem then approach from both sides
@@ -20,6 +21,7 @@
 76 | Minimum Window Substring | Hard | Hash Table, Two Pointers, String | build hash table, move right pointer to match, move left pointer to find minimum
 155 | Min Stack | Easy | Stack, Design | use two stacks to implement, keep the current minimum on the top
 167 | Two Sum II - Input array is sorted | Medium | Two Pointers | approach from both sides
+214 | Shortest Palindrome | Hard | [KMP Algorithm](http://blog.csdn.net/v_july_v/article/details/7041827), String | build a string with its reverse, then use KMP to find the longest common prefix and suffix, which is the longest palindrome, the length will be shown as the last value in the KMP table
 239 | Sliding Window Maximum | Hard | Queue | use a double-ended queue (deque) to store the potential maximum
 306 | Additive Number | Medium | String, Math | handle leading zero cases and recursively test if it is additive
 371 | Sum of Two Integers | Easy | [Bit Manipulation](https://discuss.leetcode.com/topic/50315/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently) | use XOR to handle '0 + 0', '0 + 1', '1 + 0', use AND then left shift to handle '1 + 1'
